@@ -10,17 +10,7 @@ template<class Elementtype>
 class SeqList {
 
 public:
-	SeqList(){//无参构造，初始化表长为0
-		len = 0;
-	}
-	SeqList(Elementtype a[], int n);//有参构造，用一个数组初始化线性表
-	//因为没有自己手动开辟空间，析构函数跟拷贝构造就用默
-	void MergeSeqList(SeqList& L);//合并两个已排好序线性表的算法
-private:
-	Elementtype elements[maxlength]; //数组，用来存放线性表中的元素
-	int len;//记录表长
-};
-template <class Elementtype>
+e>
 SeqList<Elementtype>::SeqList(Elementtype a[], int n)//有参构造，用一个数组初始化线性表
 {
 	if (n > maxlength)

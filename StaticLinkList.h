@@ -10,18 +10,7 @@ struct SNode {
 };
 
 
-    int FindEnd(int L);//查找一个游标指向线性表的末尾位置
 
-public:
-    SNode<DataType> SList[Maxsize];
-    int av;//标识线性表
-    int len;//记录线性表长度
-};
-
-
-template<class DataType>
-void StaticLinkList<DataType>::BuildList(int L)//在静态链表空间中创建一个线性表实例，即把游标位置从可用空间表中移除
-{
     int j = 0;
     for (j = 0; SList[j].next != L; j= SList[j].next);//已经到了空闲表中游标的前驱
     int i= SList[L].next;//空闲表中游标的后继
