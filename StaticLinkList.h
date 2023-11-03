@@ -36,23 +36,7 @@ int StaticLinkList<DataType>::GetNode() {//相当于NEW操作
     if (SList[av].next == -1)
         p = -1;
     else {
-        p = SList[av].next;
-        SList[av].next = SList[p].next;
-    }
-    return p;
-}
-
-template<class DataType>
-void StaticLinkList<DataType>::FreeNode(int q) {//回收操作
-    SList[q].next = SList[av].next;
-    SList[av].next = q;
-}
-
-template<class DataType>
-void StaticLinkList<DataType>::Insert(DataType x, int p)
-{
-    int q;
-    q = GetNode();
+      
     SList[q].data = x;
     SList[q].next = SList[p].next;
     SList[p].next = q;

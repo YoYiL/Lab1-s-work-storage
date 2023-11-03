@@ -66,17 +66,7 @@ void SeqList<Elementtype>::Delete2(Elementtype x) //°´ÖµÉ¾³ı²Ù×÷,ÖØ¸´ÔªËØÖ»É¾³ıµ
 		cout << "Î´ÕÒµ½¸ÃÖµ" << endl;
 	else {
 		for (int j = p; j < len; j++)
-			elements[j - 1] = elements[j];
-		len--;
-	}
-}
-
-template <class Elementtype>
-void SeqList<Elementtype>::Sort() {//ÎÒÓÃµÄ¼òµ¥Ã°ÅİÅÅĞò
-	int i, j;
-	for (i = 0; i < len-1; i++)
-	{
-		bool flag = false;
+l flag = false;
 		for (j = len-1; j >= i + 1; j--)
 			if (elements[j] < elements[j - 1])
 			{

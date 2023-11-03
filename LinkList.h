@@ -47,16 +47,7 @@ LinkList<Elementtype>::~LinkList()//析构函数，手动删除开辟空间
 template<class Elementtype>
 int LinkList<Elementtype>::Locate(Elementtype x) //用于之后的按值删除函数
 {
-    Node<Elementtype>* p = first->next;
-    int count = 1;
-    while (p != NULL)
-    {
-        if (p->data == x) return count;
-        p = p->next;
-        count++;
-    }
-    return 0;
-}
+
 
 template<class Elementtype>
 void LinkList<Elementtype>::Insert(int i, Elementtype x)//插入操作
