@@ -9,17 +9,7 @@ struct SNode {
     int next;
 };
 
-template<class DataType>
-class StaticLinkList {
-public:
-    StaticLinkList();//无参构造，初始化静态链表
-    void BuildList(int L);//在静态链表空间中创建一个线性表实例，即把游标位置从可用空间表中移除
-    int GetNode();//相当于NEW操作
-    void FreeNode(int q);//回收操作
-    void Insert(DataType x, int p);
-    void Delete(int p);//参数为数组位置，删的实际是SList[p].next
-    void Reverse(int L);//参数为游标头
-    void print(int L);
+
     int FindEnd(int L);//查找一个游标指向线性表的末尾位置
 
 public:
@@ -28,15 +18,6 @@ public:
     int len;//记录线性表长度
 };
 
-template<class DataType>
-StaticLinkList<DataType>::StaticLinkList() {//无参构造，初始化静态链表
-    int j = 0;
-    for (j = 0; j < Maxsize - 1; j++)
-        SList[j].next = j + 1;
-    SList[j].next = -1;//最后一个为空
-    av = 0;//可用空间表
-    len = 0;
-}
 
 template<class DataType>
 void StaticLinkList<DataType>::BuildList(int L)//在静态链表空间中创建一个线性表实例，即把游标位置从可用空间表中移除

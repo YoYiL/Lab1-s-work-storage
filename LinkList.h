@@ -16,14 +16,7 @@ class LinkList
 public:
     LinkList();//无参构造函数，生成具有头节点的空链表
     LinkList(Elementtype a[], int n);
-    ~LinkList();//因为自己在堆中开辟了空间，所以得重新设置析构函数
-    int Locate(Elementtype x);//查找
-    void Insert(int i, Elementtype x);
-    Elementtype Delete1(int i);//按位删除,返回被删除的值
-    int Delete2(Elementtype x);//按值删除，返回该值的位置
-    void Print();
-    void Sort();//排序,我用的简单冒泡排序
-    void DeleteRe();//对于已排好序的线性表，删除所有重复元素的算法。
+    ~LinkList();//因为自己在堆中开辟了空间，所以得重新设置析素的算法。
     void Reverse();//线性表“逆置”算法
     void MoveRight(int k);//循环右移
     void MoveLeft(int k);//循环左移
@@ -39,19 +32,6 @@ LinkList<Elementtype>::LinkList()//无参构造函数，生成具有头节点的空链表
     first->next = NULL;
 }
 
-template<class Elementtype>
-LinkList<Elementtype>::LinkList(Elementtype a[], int n)//有参构造，用一个数组初始化线性表，这里用的是头插法
-{
-    first = new Node<Elementtype>;
-    first->next = NULL;
-    for (int i = 0; i < n; i++)
-    {
-        Node<Elementtype>* s = new Node<Elementtype>;
-        s->data = a[i];
-        s->next = first->next;
-        first->next = s;
-    }
-}
 
 template<class Elementtype>
 LinkList<Elementtype>::~LinkList()//析构函数，手动删除开辟空间

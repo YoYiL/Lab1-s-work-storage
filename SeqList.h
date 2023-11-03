@@ -14,16 +14,7 @@ public:
 		len = 0;
 	}
 	SeqList(Elementtype a[], int n);//ÓĞ²Î¹¹Ôì£¬ÓÃÒ»¸öÊı×é³õÊ¼»¯ÏßĞÔ±í
-	//ÒòÎªÃ»ÓĞ×Ô¼ºÊÖ¶¯¿ª±Ù¿Õ¼ä£¬Îö¹¹º¯Êı¸ú¿½±´¹¹Ôì¾ÍÓÃÄ¬ÈÏµÄ¡£
-	void Insert(int i, Elementtype x);//Ëæ»ú²åÈëÔªËØ
-	void Delete1(int i); //°´Î»É¾³ı²Ù×÷
-	void Delete2(Elementtype x); //°´ÖµÉ¾³ı²Ù×÷
-	void Sort();//ÅÅĞò,ÎÒÓÃµÄ¼òµ¥Ã°ÅİÅÅĞò
-	void DeleteRe();//¶ÔÓÚÒÑÅÅºÃĞòµÄÏßĞÔ±í£¬É¾³ıËùÓĞÖØ¸´ÔªËØµÄËã·¨¡£
-	void Reverse();//ÏßĞÔ±í¡°ÄæÖÃ¡±Ëã·¨
-	void MoveRight(int k);//Ñ­»·ÓÒÒÆ
-	void MoveLeft(int k);//Ñ­»·×óÒÆ
-	void Print();//´òÓ¡ÏßĞÔ±í
+	//ÒòÎªÃ»ÓĞ×Ô¼ºÊÖ¶¯¿ª±Ù¿Õ¼ä£¬Îö¹¹º¯Êı¸ú¿½±´¹¹Ôì¾ÍÓÃÄ¬
 	void MergeSeqList(SeqList& L);//ºÏ²¢Á½¸öÒÑÅÅºÃĞòÏßĞÔ±íµÄËã·¨
 private:
 	Elementtype elements[maxlength]; //Êı×é£¬ÓÃÀ´´æ·ÅÏßĞÔ±íÖĞµÄÔªËØ
@@ -44,22 +35,6 @@ SeqList<Elementtype>::SeqList(Elementtype a[], int n)//ÓĞ²Î¹¹Ôì£¬ÓÃÒ»¸öÊı×é³õÊ¼»
 	}
 }
 
-template <class Elementtype>
-void SeqList<Elementtype>::Insert(int i, Elementtype x)//Ëæ»ú²åÈëº¯Êı£¬Ö»ÄÜÔÚÒÑÓĞÊı¾İ´¦²åÈë
-{
-	if (len >= maxlength) {
-		cout << "FULL!" << endl;
-	}
-	else if (i<1 || i>len + 1) {
-		cout << "ERROR!" << endl;		
-	}
-	else {
-		for (int j = len; j >= i; j--)//ÔªËØºóÒÆÈ»ºó²åÈë
-			elements[j] = elements[j - 1];
-		elements[i - 1] = x;
-		len++;
-	}
-}
 
 
 template <class Elementtype>
