@@ -9,7 +9,22 @@ struct SNode {
     int next;
 };
 
+<<<<<<< HEAD
 ode() {//相当于NEW操作
+=======
+
+
+    int j = 0;
+    for (j = 0; SList[j].next != L; j= SList[j].next);//已经到了空闲表中游标的前驱
+    int i= SList[L].next;//空闲表中游标的后继
+    SList[j].next = i;
+    SList[L].next = -1;//初始化表头等于表尾
+
+}
+
+template<class DataType>
+int StaticLinkList<DataType>::GetNode() {//相当于NEW操作
+>>>>>>> B2
     int p;
     if (SList[av].next == -1)
         p = -1;

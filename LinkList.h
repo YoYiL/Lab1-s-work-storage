@@ -16,8 +16,15 @@ class LinkList
 public:
     LinkList();//无参构造函数，生成具有头节点的空链表
     LinkList(Elementtype a[], int n);
+<<<<<<< HEAD
     ~LinkList();//因为自己在堆中开辟了空间，所以得重新设置析素的算法。
 
+=======
+    ~LinkList();//因为自己在堆中开辟了空间，所以得重新设置析
+public:
+    Node<Elementtype>* first;
+};
+>>>>>>> B2
 
 template<class Elementtype>
 LinkList<Elementtype>::LinkList()//无参构造函数，生成具有头节点的空链表

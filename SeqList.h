@@ -7,6 +7,18 @@ const int maxlength=500;
 //我准备构造一个类模板，使线性表能够存放各种数据类型
 
 template<class Elementtype>
+<<<<<<< HEAD
+=======
+class SeqList {
+
+public:
+e>
+SeqList<Elementtype>::SeqList(Elementtype a[], int n)//有参构造，用一个数组初始化线性表
+{
+	if (n > maxlength)
+	{
+		cout << "装不下" << endl;
+>>>>>>> B2
 
 	}
 	else {
